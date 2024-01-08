@@ -1,0 +1,8 @@
+@mixin webkit-moz($property, $value) {
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+}
+
+.example {
+  @include webkit-moz(border-radius, 10px);
+}
