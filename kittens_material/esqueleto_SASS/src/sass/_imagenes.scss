@@ -1,0 +1,34 @@
+img {
+  border-radius: 45%;
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  transition: all 3s ease;
+
+  &:hover {
+    filter: none;
+  }
+
+  &.grayscale {
+    filter: grayscale(100%);
+  }
+  &.sepia {
+    filter: sepia(80%);
+  }
+  &.blur {
+    filter: blur(5px);
+  }
+  &.hue-rotate {
+    filter: hue-rotate(150deg);
+  }
+  &.invert {
+    filter: invert(80%);
+  }
+  &.brightness {
+    filter: brightness(0.5);
+  }
+  &.contrast {
+    filter: contrast(2);
+  }
+}
