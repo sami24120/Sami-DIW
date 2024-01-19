@@ -1,7 +1,7 @@
 {
   "name": "webpack-kittens",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/js/application.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
@@ -18,6 +18,7 @@
     "html-webpack-plugin": "^5.5.3",
     "mini-css-extract-plugin": "^2.7.6",
     "node-sass": "^9.0.0",
+    "postcss-loader": "^8.0.0",
     "sass": "^1.69.5",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",
@@ -26,7 +27,14 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "@material/button": "^14.0.0",
+    "@material/ripple": "^14.0.0",
+    "@material/tab-bar": "^14.0.0",
+    "@material/tab-scroller": "^14.0.0",
+    "@material/top-app-bar": "^14.0.0",
+    "lodash": "^4.17.21",
+    "material": "^0.7.9",
+    "material-components-web": "^14.0.0"
   },
   "description": ""
 }

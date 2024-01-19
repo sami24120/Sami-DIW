@@ -1,5 +1,16 @@
-import "../sass/application.scss";
-import $ from "./jquery-2.1.0.min.js";
+import "/src/sass/application.scss"
+import $ from "./jquery-2.1.0.min.js"
+import {MDCTopAppBar} from '@material/top-app-bar';
+import {MDCRipple} from '@material/ripple';
+
+
+// Instantiation
+const topAppBarElement = document.querySelector('.mdc-top-app-bar');
+const topAppBar = new MDCTopAppBar(topAppBarElement);
+
+import {MDCTabBar} from '@material/tab-bar';
+
+const tabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));
 
 var names = [
   "Tiger",

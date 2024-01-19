@@ -1,37 +1,44 @@
-const path = require("path");
-
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+// Importa los módulos necesarios
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: "development",
-  entry: "./src/js/application.js",
+  //archivo de entrada de mi aplicación
+  entry: './src/js/application.js',
+  
+  //dónde se colocarán los archivos de salida
   output: {
-    filename: "main.js",
-    path: path.resolve(__dirname, "dist"),
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist'),
   },
+  
+  // Define las reglas para diferentes tipos de archivos
   module: {
     rules: [
       {
-        test: /\.(c|sc|sa)ss$/,
+        // Busca archivos que terminen en .scss
+        test: /\.s[ac]ss$/i,
+        
+        //para procesar los archivos .scss
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-          },
-          "css-loader",
-          "sass-loader",
+          'style-loader', // Inyecta CSS en el DOM
+          'css-loader', // Traduce CSS en CommonJS
+          'sass-loader', // Compila Sass a CSS
         ],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
+        // Busca archivos que terminen en .css
+        test: /\.css$/i,
+        
+        //para procesar los archivos .css
+        use: ['style-loader', 'css-loader',],
       },
     ],
   },
+  
   plugins: [
-    new MiniCssExtractPlugin({ filename: "finalStyle.css" }),
     new HtmlWebpackPlugin({
-      template: "./index.html",
+      template: './index.html',
     }),
   ],
 };
