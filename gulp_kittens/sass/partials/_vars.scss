@@ -9,7 +9,7 @@ $base-font-family: 'Didact Gothic', sans-serif;
 $logo-font-family: 'Ribeye Marrow', cursive;
 
 $page-width:     1200px;
-$kitten-width:   calc($page-width / 4);
+$kitten-width:   $page-width / 4;
 $location-width: 33%;
 $info-width:     33%;
 
