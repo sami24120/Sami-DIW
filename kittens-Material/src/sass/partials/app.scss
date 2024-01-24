@@ -1,0 +1,98 @@
+@use "@material/icon-button";
+@use "@material/top-app-bar/mdc-top-app-bar";
+@use "@material/tab-bar/mdc-tab-bar";
+@use "@material/tab-scroller/mdc-tab-scroller";
+@use "@material/tab-indicator/mdc-tab-indicator";
+@use "@material/tab/mdc-tab";
+@use "@material/layout-grid/mdc-layout-grid";
+@use "@material/card";
+
+
+@import "@material/icon-button/mdc-icon-button";
+
+@include card.core-styles;
+
+.my-card-content {
+  padding: 16px;
+}
+
+.my-card {
+  height: 350px;
+  width: 350px;
+}
+
+.mdc-top-app-bar__title{
+  font-size: 30px;
+}
+
+.mdc-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.mdc-tab-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.mdc-top-app-bar__section {
+  display: flex;
+
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.mdc-card {
+  width: 350px;
+  height: 350px;
+  border: 1px solid #ccc;
+  align-items: center;
+  text-align: center;
+
+  &__media {
+    margin-top: 10px;
+    max-width: 250px;
+    max-height: 250px;
+    width: 100%;
+  }
+
+  &__media-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .mdc-card__title {
+      margin-top: 150px;
+      font-size: 14px; 
+    }
+
+    .mdc-icon-button {
+      margin-top: 90px;
+      font-size: 14px; 
+      background-color: #a95fef;
+      color: #fff;
+      border: none;
+      width: 60%;
+      
+    }
+
+    lable{
+      font-size: 14px; 
+    }
+
+    second {
+      font-size: 12px;
+      margin-left: 6px;
+    }
+
+  }
+}
