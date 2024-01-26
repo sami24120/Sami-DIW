@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylee.css">
+    <link rel="manifest" href="">
+    <script src="sw.js"></script>
+    <title>The Computer School</title>
+</head>
+<body>
+    <header>
+
+    <div id="tittle">
+        <h1>Computer School</h1>
+      </div>
+      <div id="caption">
+        <p>Best computer school ever!</p>
+      </div>
+
+    </header>
+
+    <nav class="menu">
+        <ul>
+          <li><a>LINK 1</a></li>
+          <li><a>LINK 2</a></li>
+          <li><a>LINK 3</a></li>
+          <li><a>LINK 4</a></li>
+        </ul>
+      </nav>
+
+
+      <section class="main">
+        <article id="pattern"></article>
+        <article id="FotoFrontal">
+          <img src="imatges/fotofrontal.jpg" />
+        </article>
+
+    
+    <article class="grades">
+        <div id="table">
+          <h1>The Grades</h1>
+        </div>
+          <table>
+            <tr>
+              <th>Nom</th>
+              <th>NIF</th>
+              <th>Nota</th>
+            </tr>
+            <tr>
+              <td>Maria</td>
+              <td>1</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Joan</td>
+              <td>2</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Lluis</td>
+              <td>3</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Pepa</td>
+              <td>4</td>
+              <td>10</td>
+            </tr>
+          </table>
+      </article>
+
+
+      <article class="IMAGES">
+        <div id="javascript">
+            <img src="imatges/javascript.png" alt="javascript"/>
+            <h1>Javascript</h1>
+        </div>
+        <div id="ANGULAR">
+            <img src="imatges/angular.png"/>
+            <h1>ANGULAR</h1>
+        </div>
+        <div id="PHP">
+            <img src="imatges/php.png"/>
+            <h1>PHP</h1>
+        </div>
+        <div id="HTML5">
+            <img src="imatges/html5.png"/>
+            <h1>HTML5</h1>
+        </div>
+      </article>
+      </section>
+
+    <footer>
+        <p id="left">@cifpfbmoll.eu</p>
+        <p id="right">DESIGN OF WEB INTERFACES</p>
+    </footer>
+
+    <script>
+      window.addEventListener('load', () => {
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/sw.js').then(() => {
+            console.log('service worker registered');
+          }).catch((error) => {
+            console.warn('Error registering service worker:');
+            console.warn(error);
+          })
+        }
+      })
+    </script>
+</body>
+</html>
+
+
+
+
